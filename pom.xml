@@ -23,6 +23,8 @@
     <modules>
         <module>kafka-basics</module>
         <module>kafka-twitter</module>
+        <module>kafka-elasticsearch</module>
+        <module>kafka-stream-twitter</module>
     </modules>
 
 

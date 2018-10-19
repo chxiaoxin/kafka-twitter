@@ -1,5 +1,3 @@
-package tutorial1;
-
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
@@ -24,7 +22,7 @@ public class ConsumerDemo {
         properties.setProperty(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
         logger.info("class.getName output:" + StringDeserializer.class.getName());
         KafkaConsumer<String, String> consumer = new KafkaConsumer<String, String>(properties);
-        consumer.subscribe(Arrays.asList("demo_topic"));
+        consumer.subscribe(Arrays.asList("twitter_topic"));
         while(true) {
             ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(100));
             for(ConsumerRecord<String, String> record : records){
